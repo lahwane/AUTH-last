@@ -25,7 +25,7 @@ export function LoginSignup({ setLoggedinUser }) {
             .then(user => {
                 setLoggedinUser(user)
                 showSuccessMsg(`Welcome, ${user.fullname}`)
-                navigate('/bug') 
+                navigate('/bug')
             })
             .catch(err => {
                 console.error('Auth error:', err)
@@ -68,12 +68,12 @@ export function LoginSignup({ setLoggedinUser }) {
             </form>
 
             <div className="btns">
-                <a href="#" onClick={(ev) => {
+                <button onClick={(ev) => {
                     ev.preventDefault()
                     setIsSignup(prev => !prev)
                 }}>
                     {isSignup ? 'Already a member? Login' : 'New user? Signup here'}
-                </a>
+                </button>
             </div>
         </div>
     )
